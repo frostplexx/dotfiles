@@ -1,0 +1,15 @@
+{
+	"latest_signin": "my",
+	"device": "3t5ymfvnzfn5z5dqxzcsttccda",
+	"accounts": [
+		{
+			"shorthand": "my",
+			"accountUUID": "EJR375WU6VAWRAOXPXE55HJ6GY",
+			"url": "https://my.1password.eu",
+			"email": "daniel.inama02@gmail.com",
+			"accountKey": "A3-JNDXNY-2FV6XR-PDCEA-XXDYV-AYQD2-CE3G9",
+			"userUUID": "V4TTCAEOTZBK5NCJSJBNJYJZJE"
+		}
+	],
+	"system_auth_latest_signin": "V4TTCAEOTZBK5NCJSJBNJYJZJE"
+}

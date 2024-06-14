@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/admin.tsx"],
+  "sourcesContent": ["import { open } from \"@raycast/api\";\n\nexport default async function Admin() {\n  await open(\"https://login.tailscale.com/admin/machines\");\n}\n"],
+  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,aAAAE,IAAA,eAAAC,EAAAH,GAAA,IAAAI,EAAqB,wBAErB,eAAOF,GAA+B,CACpC,QAAM,QAAK,4CAA4C,CACzD",
+  "names": ["admin_exports", "__export", "Admin", "__toCommonJS", "import_api"]
+}

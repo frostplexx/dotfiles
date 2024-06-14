@@ -1,0 +1,17 @@
+alias http-server="ifconfig en0 |grep inet |awk '{print $2}'; python -m http.server"
+
+alias python=python3
+alias pip=pip3
+alias vim=nvim # Add vim alias
+alias v=nvim # Neovim quick alias
+alias g=lazygit # Add lazygit alias
+alias c=clear
+alias q=exit
+alias add-ssh-host="~/.config/tmux/scripts/tmux-sshionizer.sh -a"
+alias tk="tmux kill-session"
+
+# More aliases for other apps 
+alias ls="eza --icons --git --header" 
+alias cat="bat --theme=base16-256"
+alias tree="eza --icons --git --header --tree"
+alias vimdiff="nvim -d"
