@@ -18,6 +18,7 @@ This is a repo for backing up all my dotfiles.
 - zoxide
 - python 3.X
 - fzf
+- stow
 
 #### Optional
 
