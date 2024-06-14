@@ -1,3 +1,4 @@
 .DS_Store
 .config/tmux/plugins/
 .config/raycast/public-extensions-fork
+.config/raycast/config.json
