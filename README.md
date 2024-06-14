@@ -27,6 +27,7 @@ This is a repo for backing up all my dotfiles.
 - neovim
 - lazygit
 - tmux
+- npm
 
 Additionally the `.zshrc` will load the following plugins from `/opt/homebrew/share/` for macOS:
 
