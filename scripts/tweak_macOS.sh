@@ -49,9 +49,6 @@ if [ "$action" == "-a" ] || [ "$action" == "--apply" ]; then
 	defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 	defaults write -g NSWindowResizeTime -float $WINDOW_RESIZE_TIME
 
-	# Other tweaks
-	echo "Enabling key repeat."
-	defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 	echo "Enabling show hidden files."
 	defaults write com.apple.Finder AppleShowAllFiles true
