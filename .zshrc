@@ -46,6 +46,8 @@ bip() {
     fi
 }
 
+eval "$(zoxide init --cmd cd zsh)"
+eval "$(fzf --zsh)"
 
 # Enable colors:
 autoload -U colors && colors
@@ -180,8 +182,6 @@ WORDCHARS=${WORDCHARS//[\/]}
 # Check if current device is mac or x86-linux
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # Set up fzf and zoxide
-    eval "$(zoxide init --cmd cd zsh)"
-    eval "$(fzf --zsh)"
     # Plugins. They need to be loaded differently depending on if its macos or Linux
     source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
