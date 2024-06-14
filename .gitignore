@@ -4,3 +4,5 @@
 .config/raycast/config.json
 .config/github-copilot
 .config/op
+.config/vesktop/sessionData
+.config/vesktop/Crashpad
