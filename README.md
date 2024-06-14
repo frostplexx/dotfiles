@@ -1,5 +1,5 @@
 
-# DotFiles
+# dotfiles
 
 ![GitHub License](https://img.shields.io/github/license/Frostplexx/dotfiles)
 ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/Frostplexx/dotfiles)
@@ -19,5 +19,5 @@ everything to the right place.
 Inside the scripts folder there are some extra scripts that help with setting up macos.
 
 - `brew_backup_restore.sh` will let you backup and reinstall homebrew packages
-- `redice_macOS_anim_speed.sh` speeds up some macos animations and sets some finder settings
+- `tweak_macOS.sh` speeds up some macos animations and sets some finder settings
 - `install_font.sh` will install jetbrains mono nerd font
