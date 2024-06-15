@@ -6,3 +6,4 @@ README.md
 .github
 .gitignore
 LICENSE
+.pre-commit-config.yaml
