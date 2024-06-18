@@ -35,10 +35,9 @@ regex = "[^ ]+\\.rs:\\d+:\\d+"
 command = { program = "code", args = [ "--goto" ] }
 mouse = { enabled = true }
 
-
 [shell]
 program = "/bin/zsh"
-args = ["-l", "-c", "tmux attach || tmux new -s main"]
+args = ["-l", "-c", "tmux attach || tmux new-session"]
 
 [env]
 TERM = "xterm-256color"

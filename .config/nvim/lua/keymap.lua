@@ -6,7 +6,7 @@ vim.keymap.set("n", "<leader>q", ":wqa<cr>", { desc = "quit", silent = true })
 vim.keymap.set("n", "<leader>q", ":qa!<cr>", { desc = "quit without saving", silent = true })
 
 -- remap redo to u
-vim.keymap.set("n", "u", "<c-r>", { desc = "redo", noremap = false })
+vim.keymap.set("n", "U", "<c-r>", { desc = "redo", noremap = false })
 
 -- scratchpad
 vim.keymap.set("n", "sc", ":lua require('scratch').toggle()<cr>", { desc = "toggle scratchpad", silent = true })

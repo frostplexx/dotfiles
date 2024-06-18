@@ -1,5 +1,6 @@
 alias http-server="ifconfig en0 |grep inet |awk '{print $2}'; python -m http.server"
 
+
 alias python=python3
 alias pip=pip3
 alias vim=nvim # Add vim alias
@@ -15,3 +16,4 @@ alias ls="eza --icons --git --header"
 alias cat="bat --theme=base16-256"
 alias tree="eza --icons --git --header --tree"
 alias vimdiff="nvim -d"
+alias copy="rsync -avz --partial --progress"

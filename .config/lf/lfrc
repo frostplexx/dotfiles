@@ -1,0 +1,9 @@
+# ~/.config/lf/lfrc
+
+# Command to copy the current path to clipboard on macOS
+cmd copypath %{ pwd | pbcopy }
+
+# Alternatively, for Linux (uncomment the following line and comment the macOS line)
+# cmd copypath %{ echo -n "$PWD" | xclip -selection clipboard }
+
+
