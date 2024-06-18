@@ -38,7 +38,7 @@ update_vim() {
 }
 
 bip() {
-    local inst=$(brew search "$@" | fzf-tmux -p --reverse -m --no-color )
+    local inst=$(brew search "$@" | sed '/^$/s//⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯  󰔃 Casks ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯/' | fzf-tmux -p --reverse -m --no-color )
 
     if [[ $inst ]]; then
         for prog in $(echo $inst);
@@ -186,6 +186,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     source /opt/homebrew/share/zsh-autopair/autopair.zsh
+    alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # Plugins. They need to be loaded differently depending on if its macos or Linux
