@@ -28,6 +28,7 @@ This is a repo for backing up all my dotfiles.
 - lazygit
 - tmux
 - npm
+- lf
 
 Additionally the `.zshrc` will load the following plugins from `/opt/homebrew/share/` for macOS:
 
