@@ -5,6 +5,8 @@ vim.g.maplocalleader = " "
 vim.keymap.set("n", "<leader>q", ":wqa<cr>", { desc = "quit", silent = true })
 vim.keymap.set("n", "<leader>q", ":qa!<cr>", { desc = "quit without saving", silent = true })
 
+vim.keymap.set("n", "<leader>bd", ":bd<cr>", { desc = "delete buffer", silent = true })
+
 -- remap redo to u
 vim.keymap.set("n", "U", "<c-r>", { desc = "redo", noremap = false })
 

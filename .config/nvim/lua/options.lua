@@ -8,8 +8,6 @@ vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#8087a2", bold = false })
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
-vim.opt.spell = true
-vim.opt.spelllang = "en_us"
 vim.opt.foldmethod = "manual"
 vim.opt.hlsearch = false
 vim.opt.breakindent = true

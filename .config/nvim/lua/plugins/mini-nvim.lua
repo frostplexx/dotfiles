@@ -136,7 +136,7 @@ return {
             })
         end
 
-        -- [[ Mini Statusline ]]
+        -- -- [[ Mini Statusline ]]
         require("mini.statusline").setup(
         -- No need to copy this inside `setup()`. Will be used automatically.
             {
@@ -150,8 +150,6 @@ return {
         )
     end,
     keys = {
-        -- stylua: ignore
-        { "<leader>bD", function() require("mini.bufremove").delete(0, true) end, desc = "Delete Buffer (Force)" },
         {
             "<leader>e",
             ":lua MiniFiles.open()<cr>",
