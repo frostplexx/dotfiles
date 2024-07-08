@@ -46,6 +46,9 @@ bip() {
     fi
 }
 
+# Ensure you reload your shell configuration or restart the terminal
+# source ~/.bashrc or source ~/.zshrc
+
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(fzf --zsh)"
 

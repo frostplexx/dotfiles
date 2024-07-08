@@ -5,7 +5,6 @@ return {
     name = "catppuccin",
     priority = 1000,
     config = function()
-        local catpuccin_palettte = require("catppuccin.palettes").get_palette("macchiato")
         if vim.g.neovide then
             vim.cmd([[
   hi Terminal guibg=NONE ctermbg=NONE cterm=NONE
