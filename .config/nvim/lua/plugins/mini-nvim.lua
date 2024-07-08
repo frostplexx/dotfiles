@@ -108,17 +108,22 @@ return {
                 if recording_register == "" then
                     return ""
                 else
-                    return "Recording @" .. recording_register
+                    return "recording @" .. recording_register
                 end
             end
 
 
+            vim.api.nvim_set_hl(0, "MiniStatuslineGit", { bg = "", fg = "#cad3f5" })
+            vim.api.nvim_set_hl(0, "MiniStatuslineRecording", { bg = "", fg = "#8aadf4" })
+            vim.api.nvim_set_hl(0, "MiniStatuslineFilepath", { bg = "", fg = "#8087a2" })
+
+
             return mini.combine_groups({
-                { hl = mode_hl,                 strings = { mode } },
-                { hl = "MiniStatuslineDevinfo", strings = { git, diff, diagnostics } },
+                { hl = mode_hl,             strings = { mode } },
+                { hl = "MiniStatuslineGit", strings = { git, diff, diagnostics } },
                 "%<", -- truncate point
-                { hl = "MiniStatuslineFileinfo", strings = { show_macro_recording() } },
-                { hl = "MiniStatuslineLocation", strings = { filename } },
+                { hl = "MiniStatuslineRecording", strings = { show_macro_recording() } },
+                { hl = "MiniStatuslineFilepath",  strings = { filename } },
                 "%=", -- end left alignment
                 { hl = "MiniStatuslineLocation", strings = { search, location } },
                 { hl = mode_hl,                  strings = { fileinfo } },
