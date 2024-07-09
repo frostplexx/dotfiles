@@ -40,10 +40,10 @@ https://github.com/frostplexx/dotfiles/blob/95ba570a6542d41d6b94ba68f66879e1a2f1
 Additionally, for Linux `zsh-autopairs` will be loaded from `~/.zsh-autopair/autopair.zsh` as it has to be installed manually.
 The macOS paths will be loaded with the assumption that the plugins got installed through homebrew. Similarly, Linux assumes the plugins got installed using yay.
 
-## Backup Usage
+## Installation
 
 This repo is using GNU stow to manage the dotfiles. Simply clone this repo to your home directory using
-`git clone https://github.com/frostplexx/dotfiles.git ~/`. Then run `stow .` inside dotfiles, and it will automatically symlink
+`git clone https://github.com/frostplexx/dotfiles.git ~/dotfiles`. Then run `stow .` inside dotfiles, and it will automatically symlink
 everything to the right place.
 
 ## Extra Scripts
