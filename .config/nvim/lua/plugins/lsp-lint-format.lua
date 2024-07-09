@@ -2,7 +2,7 @@ return {
     {
         "frostplexx/mason-bridge.nvim",
         lazy = true,
-        dev = true,
+        dev = false,
         event = { "BufWritePre", "InsertEnter" },
         opts = {
         },
