@@ -140,7 +140,8 @@
         },
         "Experiments": {
             "enabled": true,
-            "enableIsStaff": false
+            "enableIsStaff": false,
+            "toolbarDevMenu": false
         },
         "F8Break": {
             "enabled": false
@@ -687,10 +688,10 @@
             "enabled": true
         },
         "DontRoundMyTimestamps": {
-            "enabled": false
+            "enabled": true
         },
         "MaskedLinkPaste": {
-            "enabled": false
+            "enabled": true
         },
         "Summaries": {
             "enabled": true,
@@ -713,6 +714,18 @@
         },
         "NoOnboardingDelay": {
             "enabled": true
+        },
+        "SettingsStoreAPI": {
+            "enabled": true
+        },
+        "UserSettingsAPI": {
+            "enabled": true
+        },
+        "ShowAllRoles": {
+            "enabled": false
+        },
+        "ConsoleJanitor": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -723,9 +736,9 @@
     },
     "cloud": {
         "authenticated": true,
-        "url": "https://vcloud.oracle.kuipr.de",
+        "url": "https://vcloud.kuipr.de/",
         "settingsSync": true,
-        "settingsSyncVersion": 1718024566635
+        "settingsSyncVersion": 1720809796059
     },
     "notifyAboutUpdates": true,
     "macosTranslucency": false
