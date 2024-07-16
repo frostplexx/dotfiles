@@ -18,6 +18,12 @@ This is a repo for backing up all my dotfiles.
 - fzf
 - stow
 - ripgrep
+- ffmpegthumbnailer
+- unar
+- jq
+- poppler
+- fd
+- zoxide
 
 #### Optional
 
@@ -27,7 +33,7 @@ This is a repo for backing up all my dotfiles.
 - lazygit
 - tmux
 - npm
-- lf
+- yazi
 
 Additionally, the `.zshrc` will load the following plugins from `/opt/homebrew/share/` for macOS:
 

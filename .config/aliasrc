@@ -17,3 +17,4 @@ alias cat="bat --theme=base16-256"
 alias tree="eza --icons --git --header --tree"
 alias vimdiff="nvim -d"
 alias copy="rsync -avz --partial --progress"
+alias vimdiff='nvim -d'
