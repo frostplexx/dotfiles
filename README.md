@@ -133,3 +133,22 @@ And install the IdeaVim plugin in your IDE.
 
 The most important post install configuration you have to do is set the path for `codelldb` inside `/nvim/lua/plugins/dap.lua` on line 32.
 Download `codelldb` VS Code plugin from: [HERE](https://github.com/vadimcn/codelldb/releases). For more info about debugging see [here](https://github.com/wojciech-kulik/xcodebuild.nvim?tab=readme-ov-file)
+
+
+# Hyprland
+
+## Requirements
+
+- ly
+- hyprland
+- dunst
+- swww
+- rofi
+- pamixer
+- polkit-gnome
+- thunar
+- wl-clipboard 
+- wf-recorder
+- wlogout
+- playerctl
+- cliphist

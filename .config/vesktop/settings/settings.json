@@ -726,6 +726,9 @@
         },
         "ConsoleJanitor": {
             "enabled": false
+        },
+        "MentionAvatars": {
+            "enabled": true
         }
     },
     "notifications": {
@@ -738,7 +741,7 @@
         "authenticated": true,
         "url": "https://vcloud.kuipr.de/",
         "settingsSync": true,
-        "settingsSyncVersion": 1720809796059
+        "settingsSyncVersion": 1721223726568
     },
     "notifyAboutUpdates": true,
     "macosTranslucency": false
