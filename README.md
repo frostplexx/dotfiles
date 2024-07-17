@@ -24,6 +24,7 @@ This is a repo for backing up all my dotfiles.
 - poppler
 - fd
 - zoxide
+- mpv
 
 #### Optional
 
