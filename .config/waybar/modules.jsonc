@@ -47,10 +47,10 @@
     "format-icons": {
       "1": "󰖟",
       "2": "",
-      "3": "",
+      "3": "",
       "4": "󰓇",
-      "3": "󰅩",
-      "4": "󰞶",
+      "5": "󰞶",
+      "6": "󰅩",
       "7": "",
       "8": "󰕧",
       "9": "󰭠",
@@ -59,7 +59,7 @@
   },
   "group/control-center": {
     "orientation": "inherit",
-    "modules": ["hyprland/language", "group/audio", "group/connection"],
+    "modules": ["tray", "group/audio", "group/connection"],
   },
   "hyprland/language": {
     "format": "{}",
