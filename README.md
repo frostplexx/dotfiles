@@ -1,11 +1,43 @@
-# <center> dotfiles </center> 
-
 ![GitHub License](https://img.shields.io/github/license/Frostplexx/dotfiles)
 ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/Frostplexx/dotfiles)
 ![GitHub top language](https://img.shields.io/github/languages/top/Frostplexx/dotfiles)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/Frostplexx/dotfiles/main)
 
-This is a repo for backing up all my dotfiles.
+Dotfiles for macOS 14+ and Arch Linux running Hyprland
+
+## Used Software
+
+### Shared 
+
+| Type                               | Name                                                                             |
+| ---------------------------------- | -------------------------------------------------------------------------------- |
+| Browser                            | [Librewolf](https://librewolf.net/)                                              |
+| Browser Startpage                  | [startpage](https://gitlab.com/fazzi/startpage) by fazzi                         |
+| Browser CSS                        | [FirefoxCSS](https://github.com/Bali10050/FirefoxCSS) by Bali10050               |
+| Text Editor                        | [Neovim](https://neovim.io/)                                                     |
+| Terminal File Manager              | [yazi](https://github.com/sxyazi/yazi)                                           |
+| Better ls                          | [eza](https://github.com/eza-community/eza)                                      |
+| Better cd                          | [zoxide](https://github.com/ajeetdsouza/zoxide)                                  |
+| System Info                        | [fastfetch](https://github.com/fastfetch-cli/fastfetch)                          |
+| Music Player                       | Spotify with [Spicetify](https://spicetify.app/)                                 |
+
+### macOS Specific 
+
+### Linux Specific
+
+| Type                               | Name                                                                             |
+| ---------------------------------- | -------------------------------------------------------------------------------- |
+| Wallpaper Daemon                   | [swww](https://github.com/LGFae/swww)                                            |
+| AUR Helper                         | [yay](https://github.com/Jguer/yay)                                              |
+| App Launcher                       | [Rofi](https://github.com/davatorium/rofi)                                       |
+| Screenshot Utility                 | [hyprshot](https://github.com/Gustash/Hyprshot)                                  |
+| System Info                        | [fastfetch](https://github.com/fastfetch-cli/fastfetch)                          |
+| Notification Daemon/Control Center | [Sway Notification Center](https://github.com/ErikReider/SwayNotificationCenter) |
+| Lockscreen App                     | [hyprlock](https://github.com/hyprwm/hyprlock)                                   |
+| Idle Daemon                        | [hypridle](https://github.com/hyprwm/hypridle)                                   |
+| Power Menu App                     | [wlogout](https://github.com/ArtsyMacaw/wlogout)                                 |
+| WiFi Menu                          | [iwdrofimenu](https://github.com/defname/rofi-iwd-wifi-menu)                     |
+| Bluetooth Manager                  | [Overskride](https://github.com/kaii-lb/overskride)                              |
 
 ## Prerequisites
 
