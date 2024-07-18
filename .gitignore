@@ -6,4 +6,7 @@
 .config/op
 .config/vesktop/sessionData
 .config/vesktop/Crashpad
+.config/vesktop/SingletonLock
+.config/vesktop/SingletonCookie
+.config/vesktop/SingletonSocket
 .config/1Password

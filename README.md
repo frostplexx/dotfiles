@@ -1,8 +1,9 @@
-# dotfiles
+# <center> dotfiles </center> 
 
 ![GitHub License](https://img.shields.io/github/license/Frostplexx/dotfiles)
 ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/Frostplexx/dotfiles)
 ![GitHub top language](https://img.shields.io/github/languages/top/Frostplexx/dotfiles)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/Frostplexx/dotfiles/main)
 
 This is a repo for backing up all my dotfiles.
 
