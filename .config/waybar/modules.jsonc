@@ -195,7 +195,7 @@
       "transition-duration": 300,
       "transition-left-to-right": true,
     },
-    "modules": ["custom/arrow-left", "custom/notifications", "custom/weather", "custom/theme-switcher"],
+    "modules": ["custom/arrow-left", "custom/notifications", "custom/weather"],
   },
   "custom/arrow-left": {
     "format": "󰁒",
@@ -227,11 +227,6 @@
     "interval": 3600,
     "exec": "wttrbar --custom-indicator '{ICON}{temp_C}'",
     "return-type": "json",
-  },
-  "custom/theme-switcher": {
-    "format": "󰏘",
-    "tooltip": false,
-    "on-click": "~/.config/hypr/scripts/toggle_theme.sh",
   },
   "clock": {
     "format": "{:%H:%M}",
