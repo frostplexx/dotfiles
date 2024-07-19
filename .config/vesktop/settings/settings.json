@@ -2,7 +2,9 @@
     "autoUpdate": true,
     "autoUpdateNotification": true,
     "useQuickCss": false,
-    "themeLinks": [],
+    "themeLinks": [
+        "https://catppuccin.github.io/discord/dist/catppuccin-macchiato.theme.css"
+    ],
     "enabledThemes": [],
     "enableReactDevtools": false,
     "frameless": false,
@@ -741,7 +743,7 @@
         "authenticated": true,
         "url": "https://vcloud.kuipr.de/",
         "settingsSync": true,
-        "settingsSyncVersion": 1721223726568
+        "settingsSyncVersion": 1721321037006
     },
     "notifyAboutUpdates": true,
     "macosTranslucency": false

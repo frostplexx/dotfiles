@@ -7,3 +7,4 @@ README.md
 .gitignore
 LICENSE
 .pre-commit-config.yaml
+custom_scripts

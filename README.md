@@ -11,23 +11,31 @@ Dotfiles for macOS 14+ and Arch Linux running Hyprland
 
 | Type                               | Name                                                                             |
 | ---------------------------------- | -------------------------------------------------------------------------------- |
-| Browser                            | [Librewolf](https://librewolf.net/)                                              |
-| Browser Startpage                  | [startpage](https://gitlab.com/fazzi/startpage) by fazzi                         |
-| Browser CSS                        | [FirefoxCSS](https://github.com/Bali10050/FirefoxCSS) by Bali10050               |
 | Text Editor                        | [Neovim](https://neovim.io/)                                                     |
+| Terminal                           | [kitty](sw.kovidgoyal.net/kitty)                                                 |
 | Terminal File Manager              | [yazi](https://github.com/sxyazi/yazi)                                           |
 | Better ls                          | [eza](https://github.com/eza-community/eza)                                      |
 | Better cd                          | [zoxide](https://github.com/ajeetdsouza/zoxide)                                  |
 | System Info                        | [fastfetch](https://github.com/fastfetch-cli/fastfetch)                          |
+| Fuzzy Finder                       | [fzf](https://github.com/junegunn/fzf)                                           | 
 | Music Player                       | Spotify with [Spicetify](https://spicetify.app/)                                 |
+| Git Client                         | [lazygit](https://github.com/jesseduffield/lazygit)                              |
+| Terminal Multiplexer               | [tmux](https://github.com/tmux/tmux/wiki)                                        |
+| Chat Client                        | [vesktop](https://github.com/Vencord/Vesktop?tab=readme-ov-file)                 | 
 
 ### macOS Specific 
+
+| Type                               | Name                                                                             |
+| ---------------------------------- | -------------------------------------------------------------------------------- |
+| Browser                            | [Arc](https://arc.net)                                                           |
+| Package Manager                    | [homebrew](https://brew.sh/)                                                     |
 
 ### Linux Specific
 
 | Type                               | Name                                                                             |
 | ---------------------------------- | -------------------------------------------------------------------------------- |
 | Wallpaper Daemon                   | [swww](https://github.com/LGFae/swww)                                            |
+| Browser                            | [Firefox](https://firefox.com)                                                   |
 | AUR Helper                         | [yay](https://github.com/Jguer/yay)                                              |
 | App Launcher                       | [Rofi](https://github.com/davatorium/rofi)                                       |
 | Screenshot Utility                 | [hyprshot](https://github.com/Gustash/Hyprshot)                                  |
@@ -52,7 +60,7 @@ Dotfiles for macOS 14+ and Arch Linux running Hyprland
 - stow
 - ripgrep
 - ffmpegthumbnailer
-- unar
+- unzip
 - jq
 - poppler
 - fd
@@ -82,11 +90,20 @@ The macOS paths will be loaded with the assumption that the plugins got installe
 
 ## Installation
 
+### macOS Specific
+
+Coming soon
+
+### Linux Specific
+
+Coming soon
+
+### Shared
+
 This repo is using GNU stow to manage the dotfiles. Simply clone this repo to your home directory using
 `git clone https://github.com/frostplexx/dotfiles.git ~/dotfiles`. Then run `stow .` inside dotfiles, and it will automatically symlink
 everything to the right place.
 
-## Extra Scripts
 
 Inside the `scripts` folder there are some extra scripts that help with setting up macOS.
 
@@ -94,7 +111,7 @@ Inside the `scripts` folder there are some extra scripts that help with setting 
 - `tweak_macOS.sh` speeds up some macOS animations and sets some finder settings
 - `install_font.sh` will install JetBrains mono nerd font
 
-## Aliases
+#### Aliases
 
 Aliases are defined in `.config/aliasrc`.
 
