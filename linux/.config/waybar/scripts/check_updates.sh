@@ -75,7 +75,7 @@ format_pacman_updates() {
 pacman_updates=$(checkupdates)
 pacman_updates_count=$(count_updates "$pacman_updates")
 
-aur_updates=$(yay -Qua)
+aur_updates=$(paru -Qua)
 aur_updates_count=$(count_updates "$aur_updates")
 
 total_updates=$((pacman_updates_count + aur_updates_count))

@@ -76,6 +76,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 export PATH="$PATH:/Users/daniel/.local/bin"
 export EDITOR=nvim
+export GCM_CREDENTIAL_STORE=secretservice
 
 # fzf settings
 export FZF_DEFAULT_OPTS=" \

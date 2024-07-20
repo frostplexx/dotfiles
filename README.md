@@ -36,7 +36,7 @@ Dotfiles for macOS 14+ and Arch Linux running Hyprland
 | ---------------------------------- | -------------------------------------------------------------------------------- |
 | Wallpaper Daemon                   | [swww](https://github.com/LGFae/swww)                                            |
 | Browser                            | [Firefox](https://firefox.com)                                                   |
-| AUR Helper                         | [yay](https://github.com/Jguer/yay)                                              |
+| AUR Helper                         | [paru](https://github.com/Morganamilo/paru)                                      |
 | App Launcher                       | [Rofi](https://github.com/davatorium/rofi)                                       |
 | Screenshot Utility                 | [hyprshot](https://github.com/Gustash/Hyprshot)                                  |
 | System Info                        | [fastfetch](https://github.com/fastfetch-cli/fastfetch)                          |
@@ -70,7 +70,7 @@ Dotfiles for macOS 14+ and Arch Linux running Hyprland
 #### Optional
 
 - homebrew (for macOS)
-- yay (for Linux)
+- paru (for Arch)
 - neovim
 - lazygit
 - tmux
@@ -86,7 +86,7 @@ and from `/usr/share/zsh/` for Linux:
 https://github.com/frostplexx/dotfiles/blob/95ba570a6542d41d6b94ba68f66879e1a2f133fd/.zshrc#L191-L195
 
 Additionally, for Linux `zsh-autopairs` will be loaded from `~/.zsh-autopair/autopair.zsh` as it has to be installed manually.
-The macOS paths will be loaded with the assumption that the plugins got installed through homebrew. Similarly, Linux assumes the plugins got installed using yay.
+The macOS paths will be loaded with the assumption that the plugins got installed through homebrew. Similarly, Linux assumes the plugins got installed using paru.
 
 ## Installation
 
