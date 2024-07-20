@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "security.autolock.minutes": 60,
+  "security.authenticatedUnlock.enabled": true,
+  "app.theme": "dark",
+  "appearance.interfaceDensity": "compact",
+  "sidebar.showCategories": true,
+  "sidebar.showTags": false,
+  "authTags": {
+    "app.theme": "w1LyJOjNdmHC6rAKth9zROxcUmvh0z0/wzYWdAs21EE",
+    "appearance.interfaceDensity": "6uvv3Yt+c7RNLBOotTjeU4263mFGyGRXWzrYo0ZGhls",
+    "security.authenticatedUnlock.enabled": "zAtL42cPVkb5iaNKgROXqmCnkxQYZLSEup4rL55YJRk",
+    "security.autolock.minutes": "CXSy+k4RvmB1bp4kTBRsCNzyXjqLwposxAijpkIAqAk",
+    "sidebar.showCategories": "jhuNDkZ1EdLW1d3vUmsxrHtDLTH1M6+uwoOeMyt+jrE",
+    "sidebar.showTags": "LWqfR4Pl1/KNmeZZwKrAxV6jyhGNd4r9E9NBJEZXsRE"
+  }
+}

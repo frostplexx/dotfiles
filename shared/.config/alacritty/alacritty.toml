@@ -1,0 +1,46 @@
+import = ["/Users/daniel/.config/alacritty/catppuccin-macchiato.toml"]
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[font]
+size = 12.0
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Medium"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Medium Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[window]
+decorations = "buttonless"
+startup_mode = "Maximized"
+decorations_theme_variant = "dark"
+dynamic_padding = true
+opacity = 0.75
+blur = true 
+
+[window.padding]
+x = 1
+y = 1
+
+[[hints.enabled]]
+regex = "[^ ]+\\.rs:\\d+:\\d+"
+command = { program = "code", args = [ "--goto" ] }
+mouse = { enabled = true }
+
+[shell]
+program = "/bin/zsh"
+args = ["-l", "-c", "tmux attach || tmux new-session"]
+
+[env]
+TERM = "xterm-256color"
+PLASMA_USE_QT_SCALING = "0.75"
+QT_SCALE_FACTOR = "0.75"
+WINIT_X11_SCALE_FACTOR = "0.75"

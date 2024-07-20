@@ -1,0 +1,7 @@
+wsl = false
+no-multigrid = false
+vsync = false
+maximized = false
+srgb = false
+idle = true
+frame = "transparent"

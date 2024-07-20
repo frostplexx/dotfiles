@@ -1,0 +1,4 @@
+2024/07/20-09:25:17.862 181cd Reusing MANIFEST /home/daniel/.config/1Password/Partitions/1password/Session Storage/MANIFEST-000001
+2024/07/20-09:25:17.862 181cd Recovering log #3
+2024/07/20-09:25:17.862 181cd (ignoring error) /home/daniel/.config/1Password/Partitions/1password/Session Storage/000003.log: dropping 2261 bytes; Corruption: checksum mismatch
+2024/07/20-09:25:17.862 181cd Reusing old log /home/daniel/.config/1Password/Partitions/1password/Session Storage/000003.log 
