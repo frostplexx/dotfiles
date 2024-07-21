@@ -14,7 +14,7 @@
 
 {
     "label" : "suspend",
-    "action" : "systemctl suspend",
+    "action" : "",
     "text" : "Suspend",
     "keybind" : "u"
 }
