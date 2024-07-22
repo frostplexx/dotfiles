@@ -45,7 +45,7 @@ Dotfiles for macOS 14+ and Arch Linux running Hyprland
 | Idle Daemon                        | [hypridle](https://github.com/hyprwm/hypridle)                                   |
 | Power Menu App                     | [wlogout](https://github.com/ArtsyMacaw/wlogout)                                 |
 | WiFi Menu                          | [iwdrofimenu](https://github.com/defname/rofi-iwd-wifi-menu)                     |
-| Bluetooth Manager                  | [Overskride](https://github.com/kaii-lb/overskride)                              |
+| Bluetooth Manager                  | [bluetui](https://github.com/pythops/bluetui)                                    |
 
 ## Prerequisites
 
