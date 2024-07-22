@@ -1,5 +1,6 @@
 return {
     lazy = true,
+    enabled = false,
     event = "VeryLazy",
     "christoomey/vim-tmux-navigator",
     cmd = {
