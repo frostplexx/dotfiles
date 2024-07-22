@@ -1,7 +1,6 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "source": "~/.config/fastfetch/archlogo.txt",
     "height": 18,
     "padding": {
       "top": 2,
@@ -11,26 +10,26 @@
     },
   },
   "display": {
-    "separator": " -> ",
+    "separator": " ➔ ",
   },
   "modules": [
     {
       "type": "custom",
-      "format": "──────────────────── Base ────────────────────",
+      "format": "──────────────────── Base ────────────────────\n",
     },
     {
       "type": "os",
-      "key": "󰣇 os",
+      "key": " os",
       "keyColor": "31",
     },
     {
       "type": "kernel",
-      "key": " kernel",
+      "key": " kernel",
       "keyColor": "31",
     },
     {
       "type": "packages",
-      "key": "󰊠 packages",
+      "key": " packages",
       "keyColor": "31",
     },
     {
@@ -51,7 +50,7 @@
     "break",
     {
       "type": "custom",
-      "format": "───────────────────── UI ─────────────────────",
+      "format": "───────────────────── UI ─────────────────────\n",
     },
     {
       "type": "wmtheme",
@@ -75,7 +74,7 @@
     "break",
     {
       "type": "custom",
-      "format": "────────────────── Hardware ──────────────────",
+      "format": "────────────────── Hardware ──────────────────\n",
     },
     {
       "type": "host",
