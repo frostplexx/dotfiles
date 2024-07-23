@@ -2,7 +2,7 @@ return {
 	-- LSP client
 	{
 		"neovim/nvim-lspconfig",
-		event = "InsertEnter",
+		event = "VeryLazy",
 		config = function()
 			-- Update diagnostics in insert mode
 			vim.diagnostic.config({
