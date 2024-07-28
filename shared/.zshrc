@@ -24,6 +24,10 @@ bup() {
     echo "Updating Homebrew Packages..."
     brew update; 
     brew upgrade; 
+
+    brew upgrade neovim-nightly
+    xattr -cr /opt/homebrew/bin/nvim
+    
     echo "Cleaning up Homebrew Packages..."
     brew cleanup; 
     echo "Updating Appstore Apps..."
