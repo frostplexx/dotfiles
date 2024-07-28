@@ -32,6 +32,7 @@ Dotfiles for macOS 14+ and Arch Linux running Hyprland
 | Package Manager                    | [homebrew](https://brew.sh/)                                                     |
 | Window Manager                     | [yabai](https://github.com/koekeishiya/yabai)                                    |
 | Hotkey Manager                     | [skhd](https://github.com/koekeishiya/skhd.git)                                  |
+| Borders                            | [JankyBorders](https://github.com/FelixKratz/JankyBorders)                       |
 
 ### Linux Specific
 
