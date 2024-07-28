@@ -22,6 +22,7 @@ Dotfiles for macOS 14+ and Arch Linux running Hyprland
 | Git Client                         | [lazygit](https://github.com/jesseduffield/lazygit)                              |
 | Terminal Multiplexer               | [tmux](https://github.com/tmux/tmux/wiki)                                        |
 | Chat Client                        | [vesktop](https://github.com/Vencord/Vesktop?tab=readme-ov-file)                 | 
+| System Info                        | [fastfetch](https://github.com/fastfetch-cli/fastfetch)                          |
 
 ### macOS Specific 
 
@@ -29,6 +30,8 @@ Dotfiles for macOS 14+ and Arch Linux running Hyprland
 | ---------------------------------- | -------------------------------------------------------------------------------- |
 | Browser                            | [Arc](https://arc.net)                                                           |
 | Package Manager                    | [homebrew](https://brew.sh/)                                                     |
+| Window Manager                     | [yabai](https://github.com/koekeishiya/yabai)                                    |
+| Hotkey Manager                     | [skhd](https://github.com/koekeishiya/skhd.git)                                  |
 
 ### Linux Specific
 
@@ -39,13 +42,14 @@ Dotfiles for macOS 14+ and Arch Linux running Hyprland
 | AUR Helper                         | [paru](https://github.com/Morganamilo/paru)                                      |
 | App Launcher                       | [Rofi](https://github.com/davatorium/rofi)                                       |
 | Screenshot Utility                 | [hyprshot](https://github.com/Gustash/Hyprshot)                                  |
-| System Info                        | [fastfetch](https://github.com/fastfetch-cli/fastfetch)                          |
 | Notification Daemon/Control Center | [Sway Notification Center](https://github.com/ErikReider/SwayNotificationCenter) |
 | Lockscreen App                     | [hyprlock](https://github.com/hyprwm/hyprlock)                                   |
 | Idle Daemon                        | [hypridle](https://github.com/hyprwm/hypridle)                                   |
 | Power Menu App                     | [wlogout](https://github.com/ArtsyMacaw/wlogout)                                 |
 | WiFi Menu                          | [iwdrofimenu](https://github.com/defname/rofi-iwd-wifi-menu)                     |
 | Bluetooth Manager                  | [bluetui](https://github.com/pythops/bluetui)                                    |
+| Window Manager                     | [Hyprland](https://hyprland.org)                                                 |
+
 
 ## Prerequisites
 
