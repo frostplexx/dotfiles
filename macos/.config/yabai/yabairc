@@ -10,6 +10,10 @@ yabai -m config left_padding   10
 yabai -m config right_padding  10
 yabai -m config window_gap     10
 
+
+yabai -m config mouse_follows_focus          off
+yabai -m config focus_follows_mouse          autofocus
+
 # on or off (default: off)
 yabai -m config auto_balance on
 
@@ -50,6 +54,38 @@ yabai -m rule --add app="^System Settings$" sticky=on
 yabai -m rule --add app="^1Password$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
 
+
+# assign windows to spaces
+yabai -m space --create id=1
+yabai -m space --create id=2
+yabai -m space --create id=3
+yabai -m space --create id=4
+yabai -m space --create id=5
+yabai -m space --create id=6
+yabai -m space --create id=7
+yabai -m space --create id=8
+yabai -m space --create id=9
+yabai -m space --create id=10
+
+
+yabai -m rule --add app="^Arc$" space=1
+yabai -m rule --add app="^Firefox$" space=1
+yabai -m rule --add app="^Kitty$" space=2
+yabai -m rule --add app="^Alacritty$" space=2
+yabai -m rule --add app="^Terminal$" space=2
+
+yabai -m rule --add app="^Messages$" space=3
+yabai -m rule --add app="^WhatsApp$" space=3
+yabai -m rule --add app="^Vesktop$" space=3
+yabai -m rule --add app="^Discord$" space=3
+
+
+yabai -m rule --add app="^Spotify$" space=4
+yabai -m rule --add app="^Music$" space=4
+
+yabai -m rule --add app="^Obsidian$" space=5
+
+# Jankyborders
 borders active_color=0xff6c6874 inactive_color=0x003b3b3e width=5.0 &
 
 
