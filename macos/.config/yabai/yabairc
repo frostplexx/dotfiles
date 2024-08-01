@@ -21,8 +21,6 @@ yabai -m config window_gap     10
 # on or off (default: off)
 yabai -m config auto_balance on
 
-# Floating point value between 0 and 1 (default: 0.5)
-yabai -m config split_ratio 0.5
 
 # set mouse interaction modifier key (default: fn)
 yabai -m config mouse_modifier fn
@@ -108,4 +106,4 @@ yabai -m signal --add event=window_created action='
 # yabai -m config menubar_opacity 0.0
 
 # Auto update yabai
-# YABAI_CERT=yabai-cert sh -c "$(curl -fsSL "https://git.io/update-yabai")" &
+YABAI_CERT=yabai-cert sh -c "$(curl -fsSL "https://git.io/update-yabai")" &

@@ -110,3 +110,12 @@ cmd - 8  : yabai -m space --focus 8
 cmd - 9  : yabai -m space --focus 9
 cmd - 0  : yabai -m space --focus 10
 
+
+# open macos screenshort and recording menu with ctrl + shift + 5
+ctrl + cmd - 5 : open -a "Screenshort"
+
+
+
+
+
+

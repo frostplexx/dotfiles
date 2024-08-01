@@ -42,3 +42,9 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "delete without affe
 -- search and replace in the whole file with confirmation, case-insensitive, and whole-word
 vim.keymap.set("n", "<leader>s", [[:%s/\<<c-r><c-w>\>/<c-r><c-w>/gi<left><left><left>]],
     { desc = "search and replace in file" })
+
+-- diff mode keymap
+vim.keymap.set({ "n", "v" }, "dpr", ":diffput REMOTE <cr>", { desc = "Diff Put Remote" })
+vim.keymap.set({ "n", "v" }, "dpl", ":diffput LOCAL <cr>", { desc = "Diff Put Local" })
+vim.keymap.set({ "n", "v" }, "dgr", ":diffget REMOTE <cr>", { desc = "Diff Get Remote" })
+vim.keymap.set({ "n", "v" }, "dgl", ":diffget LOCAL <cr>", { desc = "Diff Get Local" })
