@@ -1,6 +1,6 @@
 ####### Shortcut Hotkeys #############
 # open terminal
-cmd - return : open -n /Applications/Kitty.app
+alt - return : open -n /Applications/Kitty.app
 
 
 ####### Window Management Hotkeys #############
