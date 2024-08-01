@@ -17,6 +17,10 @@ cmd + ctrl - j : yabai -m window --swap south || $(yabai -m window --display sou
 cmd + ctrl - k : yabai -m window --swap north || $(yabai -m window --display north; yabai -m display --focus north)
 cmd + ctrl - l : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east)
 
+
+
+
+
 # move focused window to previous workspace
 alt + shift - b : yabai -m window --space recent; \
                   yabai -m space --focus recent
@@ -48,8 +52,14 @@ alt + shift - right : yabai -m window --resize right:20:0
 
 
 # change layout of desktop
-alt - e : yabai -m space --layout bsp
-alt - s : yabai -m space --layout float
+alt - b : yabai -m space --layout bsp
+# enable stacking with alt-s
+alt - s : yabai -m space --layout stack
+
+
+# switch between stacks with alt-tab and alt-shift-tab
+alt - tab : yabai -m window --focus stack.next || yabai -m window --focus stack.first || yabai -m window --focus prev || yabai -m window --focus last
+alt + shift - tab : yabai -m window --focus stack.prev || yabai -m window --focus stack.last || yabai -m window --focus next || yabai -m window --focus first
 
 # float / unfloat window and center on screen
 cmd + shift - f : yabai -m window --toggle float

@@ -1,3 +1,7 @@
+#!/usr/bin/env sh
+
+
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
 # bsp or float (default: float)
@@ -53,6 +57,10 @@ yabai -m config normal_window_opacity 0.9
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^1Password$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
+
+# special rule for arc, so little arc floats but the main window is managed
+yabai -m rule --add app="^Arc$" manage=off
+yabai -m signal --add event=window_created app="^Arc$" action="~/dotfiles/macos/scripts/yabai_apply_arc_rules.sh"
 
 
 # assign windows to spaces
