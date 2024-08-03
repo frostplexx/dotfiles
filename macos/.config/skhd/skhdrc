@@ -1,5 +1,4 @@
-####### Shortcut Hotkeys #############
-# open terminal
+####### Shortcut Hotkeys ############20po# open terminal
 alt - return : open -n /Applications/Kitty.app
 
 
@@ -16,8 +15,6 @@ cmd + ctrl - h : yabai -m window --swap west || $(yabai -m window --display west
 cmd + ctrl - j : yabai -m window --swap south || $(yabai -m window --display south; yabai -m display --focus south)
 cmd + ctrl - k : yabai -m window --swap north || $(yabai -m window --display north; yabai -m display --focus north)
 cmd + ctrl - l : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east)
-
-
 
 
 
@@ -55,6 +52,8 @@ alt + shift - right : yabai -m window --resize right:20:0
 alt - b : yabai -m space --layout bsp
 # enable stacking with alt-s
 alt - s : yabai -m space --layout stack
+# enable floating with alt-t
+alt - t : yabai -m space --layout float
 
 
 # switch between stacks with alt-tab and alt-shift-tab
@@ -112,10 +111,4 @@ cmd - 0  : yabai -m space --focus 10
 
 
 # open macos screenshort and recording menu with ctrl + shift + 5
-ctrl + cmd - 5 : open -a "Screenshort"
-
-
-
-
-
-
+ctrl + cmd - 5 : open -a "Screenshot"

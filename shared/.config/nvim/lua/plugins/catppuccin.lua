@@ -32,14 +32,14 @@ return {
   ]])
 
         require("catppuccin").setup({
-            flavour = "macchiato", -- latte, frappe, macchiato, mocha
+            flavour = "macchiato",         -- latte, frappe, macchiato, mocha
             transparent_background = true, -- disables setting the background color.
-            term_colors = true,   -- sets terminal colors (e.g. `g:terminal_color_0`)
+            term_colors = true,            -- sets terminal colors (e.g. `g:terminal_color_0`)
             integrations = {
                 cmp = true,
                 gitsigns = true,
-                fidget = true,
                 harpoon = true,
+                notify = true,
                 lsp_trouble = true,
                 treesitter = true,
                 mason = true,
