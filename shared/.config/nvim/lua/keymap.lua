@@ -1,4 +1,6 @@
 -- [[ keymaps that (re)map vim functions ]]
+
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
