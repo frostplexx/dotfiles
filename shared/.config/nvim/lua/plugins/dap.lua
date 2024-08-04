@@ -1,56 +1,32 @@
 return {
-    "rcarriga/nvim-dap-ui",
+    "mfussenegger/nvim-dap",
     lazy = true,
     dependencies = {
-        'mfussenegger/nvim-dap',
-        'theHamsta/nvim-dap-virtual-text',
+        "rcarriga/nvim-dap-ui",
+        "nvim-neotest/nvim-nio",
+        "jay-babu/mason-nvim-dap.nvim",
     },
     config = function()
-        local dap = require("dap")
-        local xcodebuild = require("xcodebuild.dap")
-
-        dap.configurations.swift = {
-            {
-                name = "iOS App Debugger",
-                type = "codelldb",
-                request = "attach",
-                program = xcodebuild.get_program_path,
-                -- alternatively, you can wait for the process manually
-                -- pid = xcodebuild.wait_for_pid,
-                cwd = "${workspaceFolder}",
-                stopOnEntry = false,
-                waitFor = true,
-            },
-        }
-
-        dap.adapters.codelldb = {
-            type = "server",
-            port = "13000",
-            executable = {
-                -- set path to the downloaded codelldb
-                -- sample path: "/Users/YOU/Downloads/codelldb-aarch64-darwin/extension/adapter/codelldb"
-                command = "/Users/daniel/Documents/nvimExtras/codelldb/extension/adapter/codelldb",
-                args = {
-                    "--port",
-                    "13000",
-                    "--liblldb",
-                    -- make sure that this path is correct on your side
-                    "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
-                },
-            },
-        }
         require("dapui").setup()
-        -- disables annoying warning that requires hitting enter
-        local orig_notify = require("dap.utils").notify
-        require("dap.utils").notify = function(msg, log_level)
-            if not string.find(msg, "Either the adapter is slow") then
-                orig_notify(msg, log_level)
-            end
-        end
 
-        -- sample keymaps to debug application
-        vim.keymap.set("n", "<leader>dx", xcodebuild.build_and_debug, { desc = "Build & Debug" })
-        vim.keymap.set("n", "<leader>dr", xcodebuild.debug_without_build, { desc = "Debug Without Building" })
+        require("mason-nvim-dap").setup({
+            ensure_installed = { "python", "codelldb" },
+            handlers = {}, -- sets up dap in the predefined manner
+        })
+
+        local dap, dapui = require("dap"), require("dapui")
+        dap.listeners.before.attach.dapui_config = function()
+            dapui.open()
+        end
+        dap.listeners.before.launch.dapui_config = function()
+            dapui.open()
+        end
+        dap.listeners.before.event_terminated.dapui_config = function()
+            dapui.close()
+        end
+        dap.listeners.before.event_exited.dapui_config = function()
+            dapui.close()
+        end
     end,
     keys = {
         { "<leader>dc", "<cmd>lua require'dap'.continue()<CR>",          desc = "Continue" },

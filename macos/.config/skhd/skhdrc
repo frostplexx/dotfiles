@@ -1,6 +1,5 @@
-####### Shortcut Hotkeys #############
-# open terminal
-cmd - return : open -n /Applications/Kitty.app
+####### Shortcut Hotkeys ############20po# open terminal
+alt - return : open -n /Applications/Kitty.app
 
 
 ####### Window Management Hotkeys #############
@@ -16,6 +15,8 @@ cmd + ctrl - h : yabai -m window --swap west || $(yabai -m window --display west
 cmd + ctrl - j : yabai -m window --swap south || $(yabai -m window --display south; yabai -m display --focus south)
 cmd + ctrl - k : yabai -m window --swap north || $(yabai -m window --display north; yabai -m display --focus north)
 cmd + ctrl - l : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east)
+
+
 
 # move focused window to previous workspace
 alt + shift - b : yabai -m window --space recent; \
@@ -48,8 +49,16 @@ alt + shift - right : yabai -m window --resize right:20:0
 
 
 # change layout of desktop
-alt - e : yabai -m space --layout bsp
-alt - s : yabai -m space --layout float
+alt - b : yabai -m space --layout bsp
+# enable stacking with alt-s
+alt - s : yabai -m space --layout stack
+# enable floating with alt-t
+alt - t : yabai -m space --layout float
+
+
+# switch between stacks with alt-tab and alt-shift-tab
+alt - tab : yabai -m window --focus stack.next || yabai -m window --focus stack.first || yabai -m window --focus prev || yabai -m window --focus last
+alt + shift - tab : yabai -m window --focus stack.prev || yabai -m window --focus stack.last || yabai -m window --focus next || yabai -m window --focus first
 
 # float / unfloat window and center on screen
 cmd + shift - f : yabai -m window --toggle float
@@ -100,3 +109,6 @@ cmd - 8  : yabai -m space --focus 8
 cmd - 9  : yabai -m space --focus 9
 cmd - 0  : yabai -m space --focus 10
 
+
+# open macos screenshort and recording menu with ctrl + shift + 5
+ctrl + cmd - 5 : open -a "Screenshot"

@@ -35,6 +35,12 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
+
+-- diff mopde settings
+-- show merged at the bottom
+vim.opt.diffopt:append("algorithm:histogram,indent-heuristic")
+vim.opt.diffopt:append("filler,closeoff,vertical")
+
 -- File and backup settings
 vim.opt.wrap = false
 vim.opt.swapfile = false
