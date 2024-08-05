@@ -16,7 +16,12 @@ vim.keymap.set("n", "U", "<c-r>", { desc = "redo", noremap = false })
 vim.keymap.set("n", "sc", ":lua require('scratch').toggle()<cr>", { desc = "toggle scratchpad", silent = true })
 
 -- lazygit
-vim.keymap.set("n", "<leader>gg", ":terminal lazygit <cr> i", { desc = "open lazygit in terminal" })
+vim.keymap.set("n", "<leader>gg", function()
+    vim.cmd("terminal lazygit")
+    vim.cmd("startinsert")
+    -- Autocmd to close the terminal when lazygit exits
+    vim.cmd("autocmd TermClose * if &buftype == 'terminal' && expand('<afile>') =~ 'lazygit' | bd! | endif")
+end, { desc = "open lazygit in terminal" })
 
 vim.keymap.set("n", "<leader>gb", ":!git blame -c -- % <cr>", { desc = "git blame on current file" })
 
