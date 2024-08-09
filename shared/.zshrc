@@ -231,3 +231,4 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # Load aliases
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
+

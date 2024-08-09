@@ -2,7 +2,7 @@
 
 
 vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.maplocalleader = "\\"
 
 vim.keymap.set("n", "<leader>q", ":wqa<cr>", { desc = "quit", silent = true })
 vim.keymap.set("n", "<leader>q", ":qa!<cr>", { desc = "quit without saving", silent = true })
