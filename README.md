@@ -5,36 +5,36 @@
 
 Dotfiles for macOS 14+ and Arch Linux running Hyprland
 
-## Used Software
+# Used Software
 
-### Shared 
+## Shared
 
-| Type                               | Name                                                                             |
-| ---------------------------------- | -------------------------------------------------------------------------------- |
-| Text Editor                        | [Neovim](https://neovim.io/)                                                     |
-| Terminal                           | [kitty](sw.kovidgoyal.net/kitty)                                                 |
-| Terminal File Manager              | [yazi](https://github.com/sxyazi/yazi)                                           |
-| Better ls                          | [eza](https://github.com/eza-community/eza)                                      |
-| Better cd                          | [zoxide](https://github.com/ajeetdsouza/zoxide)                                  |
-| System Info                        | [fastfetch](https://github.com/fastfetch-cli/fastfetch)                          |
-| Fuzzy Finder                       | [fzf](https://github.com/junegunn/fzf)                                           | 
-| Music Player                       | Spotify with [Spicetify](https://spicetify.app/)                                 |
-| Git Client                         | [lazygit](https://github.com/jesseduffield/lazygit)                              |
-| Terminal Multiplexer               | [tmux](https://github.com/tmux/tmux/wiki)                                        |
-| Chat Client                        | [vesktop](https://github.com/Vencord/Vesktop?tab=readme-ov-file)                 | 
-| System Info                        | [fastfetch](https://github.com/fastfetch-cli/fastfetch)                          |
+| Type                  | Name                                                             |
+| --------------------- | ---------------------------------------------------------------- |
+| Text Editor           | [Neovim](https://neovim.io/)                                     |
+| Terminal              | [kitty](sw.kovidgoyal.net/kitty)                                 |
+| Terminal File Manager | [yazi](https://github.com/sxyazi/yazi)                           |
+| Better ls             | [eza](https://github.com/eza-community/eza)                      |
+| Better cd             | [zoxide](https://github.com/ajeetdsouza/zoxide)                  |
+| System Info           | [fastfetch](https://github.com/fastfetch-cli/fastfetch)          |
+| Fuzzy Finder          | [fzf](https://github.com/junegunn/fzf)                           |
+| Music Player          | Spotify with [Spicetify](https://spicetify.app/)                 |
+| Git Client            | [lazygit](https://github.com/jesseduffield/lazygit)              |
+| Terminal Multiplexer  | [tmux](https://github.com/tmux/tmux/wiki)                        |
+| Chat Client           | [vesktop](https://github.com/Vencord/Vesktop?tab=readme-ov-file) |
+| System Info           | [fastfetch](https://github.com/fastfetch-cli/fastfetch)          |
 
-### macOS Specific 
+## macOS Specific
 
-| Type                               | Name                                                                             |
-| ---------------------------------- | -------------------------------------------------------------------------------- |
-| Browser                            | [Arc](https://arc.net)                                                           |
-| Package Manager                    | [homebrew](https://brew.sh/)                                                     |
-| Window Manager                     | [yabai](https://github.com/koekeishiya/yabai)                                    |
-| Hotkey Manager                     | [skhd](https://github.com/koekeishiya/skhd.git)                                  |
-| Borders                            | [JankyBorders](https://github.com/FelixKratz/JankyBorders)                       |
+| Type            | Name                                                       |
+| --------------- | ---------------------------------------------------------- |
+| Browser         | [Arc](https://arc.net)                                     |
+| Package Manager | [homebrew](https://brew.sh/)                               |
+| Window Manager  | [yabai](https://github.com/koekeishiya/yabai)              |
+| Hotkey Manager  | [skhd](https://github.com/koekeishiya/skhd.git)            |
+| Borders         | [JankyBorders](https://github.com/FelixKratz/JankyBorders) |
 
-### Linux Specific
+## Linux Specific
 
 | Type                               | Name                                                                             |
 | ---------------------------------- | -------------------------------------------------------------------------------- |
@@ -51,11 +51,15 @@ Dotfiles for macOS 14+ and Arch Linux running Hyprland
 | Bluetooth Manager                  | [bluetui](https://github.com/pythops/bluetui)                                    |
 | Window Manager                     | [Hyprland](https://hyprland.org)                                                 |
 
+# Prerequisites
 
-## Prerequisites
+<details>
+<summary>Prerequisites</summary>
 
-#### Required
+## Required
 
+- homebrew (for macOS)
+- paru (for Arch)
 - zsh
 - eza
 - bat
@@ -69,18 +73,14 @@ Dotfiles for macOS 14+ and Arch Linux running Hyprland
 - jq
 - poppler
 - fd
-- zoxide
-- mpv
 
-#### Optional
+## Optional
 
-- homebrew (for macOS)
-- paru (for Arch)
 - neovim
 - lazygit
-- tmux
 - npm
 - yazi
+- kitty
 
 Additionally, the `.zshrc` will load the following plugins from `/opt/homebrew/share/` for macOS:
 
@@ -93,106 +93,95 @@ https://github.com/frostplexx/dotfiles/blob/95ba570a6542d41d6b94ba68f66879e1a2f1
 Additionally, for Linux `zsh-autopairs` will be loaded from `~/.zsh-autopair/autopair.zsh` as it has to be installed manually.
 The macOS paths will be loaded with the assumption that the plugins got installed through homebrew. Similarly, Linux assumes the plugins got installed using paru.
 
-## Installation
+</details>
 
-### macOS Specific
+# Installation
 
-Coming soon
+<details>
+<summary>macOS Specific</summary>
 
-### Linux Specific
+### Prerequisites
 
-Coming soon
+Install homebrew using `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`.
+After that install all the required packages using the following command:
+`brew install zsh eza bat zoxide fzf stow ripgrep ffmpegthumbnailer unzip jq poppler fd`
 
-### Shared
-
-This repo is using GNU stow to manage the dotfiles. Simply clone this repo to your home directory using
-`git clone https://github.com/frostplexx/dotfiles.git ~/dotfiles`. Then run `stow .` inside dotfiles, and it will automatically symlink
-everything to the right place.
-
-
-Inside the `scripts` folder there are some extra scripts that help with setting up macOS.
-
-- `brew_backup_restore.sh` will let you back up and reinstall homebrew packages
-- `tweak_macOS.sh` speeds up some macOS animations and sets some finder settings
-- `install_font.sh` will install JetBrains mono nerd font
-
-#### Aliases
-
-Aliases are defined in `.config/aliasrc`.
-
-https://github.com/frostplexx/dotfiles/blob/2b3266a164bbae91eab0f020a54414be7c03dd90/.config/aliasrc#L1-L17
-
-# Tools
-
-A Description of some of the tools I use.
-
-## Neovim
-
-### Getting Started
-
-This section will explain how to install this neovim config and set it up for swift development. Most of the Swift development part of this config was taken
-from [this](https://wojciechkulik.pl/ios/how-to-develop-ios-and-macos-apps-in-other-ides-like-neovim-or-vs-code) tutorial in addition to using [xcodebuild](https://github.com/wojciech-kulik/xcodebuild.nvim).
-
-### Requirements
-
-#### For General Usage
-
-- Neovim nightly
-- Git
-- JetbrainsMono Nerd Font (or any other NerdFont)
-- lazygit
-- ripgrep
-- glow (Markdown preview)
-- fd (find files)
-
-#### Swift Specific
-
-- xcode-build-server
-- XCode
-- xcodegen
-- swiftlint
-- swiftformat
-- xcbeautify
-
-### Installation
-
-#### Backup your old config (Optional)
+You need to also install a NerdFont which you can do by running the following command
 
 ```bash
-# required
-mv ~/.config/nvim{,.bak}
-
-# optional but recommended
-mv ~/.local/share/nvim{,.bak}
-mv ~/.local/state/nvim{,.bak}
-mv ~/.cache/nvim{,.bak}
+# Install JetBrainsMono Nerd Font
+brew tap homebrew/cask-fonts
+brew install --cask font-jetbrains-mono-nerd-font
 ```
 
-#### Clone the repo
+### Tweaks
+
+Next you can run `tweak_macOS.sh` inside `./macos/scripts/`. This will apply various command line tweaks, like speeding up
+animation speeds, removing dock delay and so on.
+
+### Programs
+
+Lastly you want to install the actual applications using this command:
 
 ```bash
-git clone https://github.com/Frostplexx/vim-config.git ~/.config/nvim
+brew tap frostplexx/homebrew-neovim-nightly
+brew tap FelixKratz/formulae
+
+# Casks
+brew install \
+    frostplexx/neovim-nightly/neovim-nightly \
+    skhd \
+    borders \
+    firefox@nightly \
+    yazi \
+    lazygit \
+    npm \
+    kitty \
+    1password-cli \
+    raycast \
+    mac-mouse-fix \
+    hex-fiend \
+    mactex \
+    spotify \
+    shottr \
+    zap \
+    wireshark \
+    vmware-fusion \
+    imageoptim \
+    vesktop \
+    codeedit \
+    altserver \
+    betterdisplay \
+    burp-suite \
+    proxyman \
+    ollama
+
+brew install --HEAD yabai
+
+# Formulae
+brew install \
+    binwalk \
+    ffmpeg \
+    exiftool \
+    fastfetch \
+    ggshield \
+    imagemagick \
+    qemu \
+    qmk \
+    rust \
+    zsh-autopair \
+    zsh-autosuggestions \
+    zsh-syntax-highlighting
 ```
 
-#### Set up `.ideavimrc` (Optional)
+</details>
 
-This config also includes my `.ideavimrc` file. Symlink it to your home folder with the following command:
+<details>
+<summary>Linux Specific</summary>
 
-```bash
-ln -s ~/.config/nvim/.ideavimrc ~/.ideavimrc
-```
+### Hyprland
 
-And install the IdeaVim plugin in your IDE.
-
-## Configure
-
-The most important post install configuration you have to do is set the path for `codelldb` inside `/nvim/lua/plugins/dap.lua` on line 32.
-Download `codelldb` VS Code plugin from: [HERE](https://github.com/vadimcn/codelldb/releases). For more info about debugging see [here](https://github.com/wojciech-kulik/xcodebuild.nvim?tab=readme-ov-file)
-
-
-# Hyprland
-
-## Requirements
+#### Requirements
 
 - ly
 - hyprland
@@ -202,8 +191,31 @@ Download `codelldb` VS Code plugin from: [HERE](https://github.com/vadimcn/codel
 - pamixer
 - polkit-gnome
 - thunar
-- wl-clipboard 
+- wl-clipboard
 - wf-recorder
 - wlogout
 - playerctl
 - cliphist
+</details>
+
+## Shared
+
+This repo is using GNU stow to manage the dotfiles. Simply clone this repo to your home directory using
+`git clone https://github.com/frostplexx/dotfiles.git ~/dotfiles`. Then run `./autostow.sh` inside dotfiles, and it will automatically symlink
+everything to the right place.
+
+### Spicetify
+
+To get Spicetify working run `spicetify backup apply`.
+
+### Vesktop
+
+Vesktop can easily be synced using my own self host sync at `https://vcloud.kuipr.de`.
+
+# Configuration
+
+## Aliases
+
+Aliases are defined in `.config/aliasrc`.
+
+https://github.com/frostplexx/dotfiles/blob/2b3266a164bbae91eab0f020a54414be7c03dd90/.config/aliasrc#L1-L17
