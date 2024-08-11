@@ -212,6 +212,20 @@ To get Spicetify working run `spicetify backup apply`.
 
 Vesktop can easily be synced using my own self host sync at `https://vcloud.kuipr.de`.
 
+### Firefox
+
+Enable vertical tabs in firefox nightlys lab section and add the following userChrome.css
+
+```css
+#TabsToolbar {
+  visibility: collapse;
+}
+
+#titlebar {
+  display: none;
+}
+```
+
 # Configuration
 
 ## Aliases
