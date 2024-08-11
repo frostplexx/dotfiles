@@ -102,9 +102,17 @@ The macOS paths will be loaded with the assumption that the plugins got installe
 
 ### Prerequisites
 
-Install homebrew using `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`.
+Install homebrew using
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
 After that install all the required packages using the following command:
-`brew install zsh eza bat zoxide fzf stow ripgrep ffmpegthumbnailer unzip jq poppler fd`
+
+```bash
+brew install zsh eza bat zoxide fzf stow ripgrep ffmpegthumbnailer unzip jq poppler fd
+```
 
 You need to also install a NerdFont which you can do by running the following command
 
