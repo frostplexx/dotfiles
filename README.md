@@ -174,7 +174,6 @@ brew install \
     ggshield \
     imagemagick \
     qemu \
-    qmk \
     rust \
     zsh-autopair \
     zsh-autosuggestions \
