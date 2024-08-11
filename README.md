@@ -138,7 +138,7 @@ brew tap FelixKratz/formulae
 # Casks
 brew install \
     frostplexx/neovim-nightly/neovim-nightly \
-    skhd \
+    koekeishiya/formulae/skhd \
     borders \
     firefox@nightly \
     yazi \
@@ -156,7 +156,6 @@ brew install \
     wireshark \
     vmware-fusion \
     imageoptim \
-    vesktop \
     codeedit \
     altserver \
     betterdisplay \
