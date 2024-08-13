@@ -1,7 +1,7 @@
 .DS_Store
 .config/tmux/plugins/
-.config/raycast/public-extensions-fork
-.config/raycast/config.json
+.config/raycast
+.config/raycast
 .config/github-copilot
 .config/op
 .config/vesktop/sessionData

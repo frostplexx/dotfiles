@@ -11,79 +11,34 @@ return {
         -- [[ Gitsigns ]]]
         require("gitsigns").setup()
 
-        -- [[ Mini Cursorword ]]
-        require("mini.cursorword").setup({})
-
         -- [[ Mini Indetenscope ]]
-        require("mini.indentscope").setup({
-            -- Draw options
-            draw = {
-                -- Delay (in ms) between event and start of drawing scope indicator
-                delay = 0,
-                animation = require("mini.indentscope").gen_animation.none(),
-            },
-
-            -- Module mappings. Use `''` (empty string) to disable one.
-            mappings = {
-                -- Textobjects
-                object_scope = "ii",
-                object_scope_with_border = "ai",
-
-                -- Motions (jump to respective border line; if not present - body line)
-                goto_top = "[i",
-                goto_bottom = "]i",
-            },
-
-            -- Options which control scope computation
-            options = {
-                border = "both",
-                indent_at_cursor = true,
-                try_as_border = false,
-            },
-            symbol = "│",
-        })
-
-        -- [[ Mini Files ]]
-        require("mini.files").setup(
-        -- No need to copy this inside `setup()`. Will be used automatically.
-            {
-                content = {
-                    filter = nil,
-                    prefix = nil,
-                    sort = nil,
-                },
-                mappings = {
-                    close = "q",
-                    go_in_plus = "<cr>",
-                    go_out = "h",
-                    go_out_plus = "H",
-                    reset = "<BS>",
-                    reveal_cwd = "@",
-                    show_help = "g?",
-                    synchronize = "=",
-                    trim_left = "<",
-                    trim_right = ">",
-                },
-                options = {
-                    permanent_delete = false,
-                    use_as_default_explorer = true,
-                },
-
-                -- Customization of explorer windows
-                windows = {
-                    -- Maximum number of windows to show side by side
-                    max_number = math.huge,
-                    -- Whether to show preview of file/directory under cursor
-                    preview = true,
-                    -- Width of focused window
-                    width_focus = 50,
-                    -- Width of non-focused window
-                    width_nofocus = 10,
-                    -- Width of preview window
-                    width_preview = 25,
-                },
-            }
-        )
+        -- require("mini.indentscope").setup({
+        --     -- Draw options
+        --     draw = {
+        --         -- Delay (in ms) between event and start of drawing scope indicator
+        --         delay = 0,
+        --         animation = require("mini.indentscope").gen_animation.none(),
+        --     },
+        --
+        --     -- Module mappings. Use `''` (empty string) to disable one.
+        --     mappings = {
+        --         -- Textobjects
+        --         object_scope = "ii",
+        --         object_scope_with_border = "ai",
+        --
+        --         -- Motions (jump to respective border line; if not present - body line)
+        --         goto_top = "[i",
+        --         goto_bottom = "]i",
+        --     },
+        --
+        --     -- Options which control scope computation
+        --     options = {
+        --         border = "both",
+        --         indent_at_cursor = true,
+        --         try_as_border = false,
+        --     },
+        --     symbol = "│",
+        -- })
 
         -- [[ Mini Pairs ]]
         require("mini.pairs").setup()
@@ -154,12 +109,4 @@ return {
             }
         )
     end,
-    keys = {
-        {
-            "<leader>e",
-            ":lua MiniFiles.open()<cr>",
-            desc = "Show Files",
-            silent = true,
-        },
-    },
 }
