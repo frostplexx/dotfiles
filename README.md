@@ -232,6 +232,11 @@ Enable vertical tabs in firefox nightlys lab section and add the following userC
 }
 ```
 
+In `about:config` change the following: 
+
+- `browser.compactmode.show = True`
+-  `browser.uidensity = 1`
+
 # Configuration
 
 ## Aliases
