@@ -62,9 +62,11 @@ yabai -m space --create id=10
 
 yabai -m rule --add app="^Arc$" space=1
 yabai -m rule --add app="^Firefox$" space=1
+
 yabai -m rule --add app="^Kitty$" space=2
 yabai -m rule --add app="^Alacritty$" space=2
 yabai -m rule --add app="^Terminal$" space=2
+yabai -m rule --add app="^XCode$" space=2
 
 yabai -m rule --add app="^Messages$" space=3
 yabai -m rule --add app="^WhatsApp$" space=3
