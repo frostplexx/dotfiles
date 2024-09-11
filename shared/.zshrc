@@ -15,7 +15,20 @@ compress_mov_to_mp4() {
     input_file="$1"
     output_file="${input_file:r}.mp4"
 
-    ffmpeg -i "$input_file" -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" -c:v libx264 -preset slow -crf 22 -c:a aac -b:a 128k "$output_file"
+    start_time=$(date +%s)
+
+    # Open a new kitty tab
+    /Applications/kitty.app/Contents/MacOS/kitty @ launch --type=tab --tab-title="Compression" --cwd=current  --copy-env -- btop
+
+    # Create a horizontal split and run ffmpeg on the left, btop on the right
+    /Applications/kitty.app/Contents/MacOS/kitty @ launch --type=window --match title:Compression --cwd=current --copy-env "ffmpeg -i \"$input_file\" -vf \"scale=trunc(iw/2)*2:trunc(ih/2)*2\" -c:v libx264 -preset slow -crf 22 -c:a aac -b:a 128k \"$output_file\"; exit\n" 
+
+    wait
+
+    end_time=$(date +%s)
+    duration=$((end_time - start_time))
+
+    /Applications/kitty.app/Contents/MacOS/kitten notify "File compressed in $duration seconds"
 }
 
 bup() {
@@ -32,6 +45,8 @@ bup() {
     brew cleanup; 
     echo "Updating Appstore Apps..."
     mas upgrade;
+    # Notify that the update is done
+    /Applications/kitty.app/Contents/MacOS/kitten notify "Homebrew finished updating packages"
 }
 
 update_vim() {
@@ -42,7 +57,7 @@ update_vim() {
 }
 
 bip() {
-    local inst=$(brew search "$@" | sed '/^$/s//⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯  󰔃 Casks ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯/' | fzf-tmux -p --reverse -m --no-color )
+    local inst=$(brew search "$@" | sed '/^$/s//⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯  󰔃 Casks ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯/' | fzf --reverse -m --no-color )
 
     if [[ $inst ]]; then
         for prog in $(echo $inst);
@@ -58,9 +73,6 @@ function yy() {
 	fi
 	rm -f -- "$tmp"
 }
-
-# Ensure you reload your shell configuration or restart the terminal
-# source ~/.bashrc or source ~/.zshrc
 
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(fzf --zsh)"

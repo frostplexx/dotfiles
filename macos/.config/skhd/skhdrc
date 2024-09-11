@@ -1,5 +1,6 @@
-####### Shortcut Hotkeys ############20po# open terminal
-alt - return : open -n /Applications/Kitty.app
+####### Shortcut Hotkeys ############
+#open terminal
+alt - return : ~/.config/skhd/workspace.sh
 
 
 ####### Window Management Hotkeys #############
