@@ -1,5 +1,6 @@
-####### Shortcut Hotkeys ############20po# open terminal
-alt - return : open -n /Applications/Kitty.app
+####### Shortcut Hotkeys ############
+#open terminal
+alt - return : ~/.config/skhd/workspace.sh
 
 
 ####### Window Management Hotkeys #############
@@ -84,6 +85,9 @@ alt + ctrl - s : yabai -m window --toggle sticky
 
 # enter fullscreen mode for the focused container
 alt - f : yabai -m window --toggle zoom-fullscreen
+
+# rotate window tree with alt - r
+alt - r : yabai -m space --rotate 90
 
 # toggle window native fullscreen
 cmd + ctrl - f : yabai -m window --toggle native-fullscreen

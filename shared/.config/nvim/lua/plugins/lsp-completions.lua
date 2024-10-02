@@ -3,6 +3,7 @@ return {
         "hrsh7th/nvim-cmp",
         event = "InsertEnter",
         lazy = true,
+        enabled = true,
         version = false,
         dependencies = {
             { "onsails/lspkind.nvim", lazy = true, event = "InsertEnter" },
@@ -97,6 +98,7 @@ return {
     },
     {
         "L3MON4D3/LuaSnip",
+        enabled = true,
         event = "InsertEnter",
         dependencies = {
             { "saadparwaiz1/cmp_luasnip",     lazy = true, event = "InsertEnter" },

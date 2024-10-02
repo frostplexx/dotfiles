@@ -36,13 +36,17 @@ require("lazy").setup({
         border = "rounded",
     },
     performance = {
+        cache = {
+            enabled = true,
+        },
         rtp = {
+            reset = true, -- reset runtimepath
             -- disable some rtp plugins
             disabled_plugins = {
                 "gzip",
                 "matchit",
                 "matchparen",
-                -- "netrwPlugin",
+                "netrwPlugin",
                 "tarPlugin",
                 "tohtml",
                 "tutor",

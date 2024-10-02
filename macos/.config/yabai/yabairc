@@ -62,9 +62,11 @@ yabai -m space --create id=10
 
 yabai -m rule --add app="^Arc$" space=1
 yabai -m rule --add app="^Firefox$" space=1
-yabai -m rule --add app="^Kitty$" space=2
+
+yabai -m rule --add app="^[Kk]itty$" space=2
 yabai -m rule --add app="^Alacritty$" space=2
 yabai -m rule --add app="^Terminal$" space=2
+yabai -m rule --add app="^XCode$" space=2
 
 yabai -m rule --add app="^Messages$" space=3
 yabai -m rule --add app="^WhatsApp$" space=3
@@ -92,4 +94,4 @@ yabai -m signal --add event=window_created action="
 # Auto update yabai
 #YABAI_CERT=yabai-cert sh -c "$(curl -fsSL "https://git.io/update-yabai")" &
 
-echo "yabai configuration loaded.."
+/Applications/kitty.app/Contents/MacOS/kitten notify "yabai configuration loaded.."
