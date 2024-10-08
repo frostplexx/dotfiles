@@ -46,3 +46,4 @@ M.format_message = function(message, percentage)
 end
 
 return M
+
