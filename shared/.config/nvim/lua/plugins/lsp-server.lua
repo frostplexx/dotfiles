@@ -168,7 +168,7 @@ return {
 				vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 				vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
 				vim.keymap.set("n", "<space>cr", vim.lsp.buf.rename, opts)
-				vim.keymap.set("n", "<D-.>", vim.lsp.buf.code_action, opts)
+				vim.keymap.set("n", "ca", vim.lsp.buf.code_action, opts)
 				vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
 
 				-- Have floating diagnostics when hovering over error
