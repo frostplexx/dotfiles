@@ -1,6 +1,7 @@
 .DS_Store
 ./shared/.config/spicetify/
 ./macos/.config/raycast/
+macos/.config/raycast
 .config/github-copilot
 .config/op
 .config/shared/vesktop/sessionData
