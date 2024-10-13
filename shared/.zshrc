@@ -6,6 +6,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 
+yr() {
+    sudo yabai --load-sa
+    yabai --restart-service
+}
+
+
 compress_mov_to_mp4() {
     if [[ $# -ne 1 ]]; then
         echo "Usage: compress_mov_to_mp4 input.mov"
@@ -106,6 +112,12 @@ export FZF_DEFAULT_OPTS=" \
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
+
+# check if .cache/zsh exists else create it
+if [ ! -d ~/.cache/zsh ]; then
+    mkdir -p ~/.cache/zsh
+fi
+
 setopt share_history
 setopt hist_expire_dups_first
 setopt hist_ignore_dups
@@ -223,7 +235,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     # Plugins. They need to be loaded differently depending on if its macos or Linux
     source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-    source /opt/homebrew/share/zsh-autopair/autopair.zsh
+    source $HOMEBREW_PREFIX/share/zsh-autopair/autopair.zsh
     alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then

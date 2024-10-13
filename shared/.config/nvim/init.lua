@@ -30,7 +30,7 @@ require("lazy").setup({
         version = false, -- always use the latest git commit
         -- colorscheme = "catppuccin",
     },
-    -- install = { colorscheme = { "catppuccin" } },ini
+    -- install = { colorscheme = { "catppuccin" } },
     checker = { enabled = false }, -- automatically check for plugin updates
     ui = {
         border = "rounded",
