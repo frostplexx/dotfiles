@@ -43,6 +43,7 @@ yabai -m config window_opacity_duration 0.15
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^1Password$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^Raycast$" manage=off
 
 # special rule for arc, so little arc floats but the main window is managed
 # yabai -m rule --add app="^Arc$" manage=off
@@ -72,6 +73,7 @@ yabai -m rule --add app="^Messages$" space=3
 yabai -m rule --add app="^WhatsApp$" space=3
 yabai -m rule --add app="^Vesktop$" space=3
 yabai -m rule --add app="^Discord$" space=3
+yabai -m rule --add app="^zoom.us$" space=3
 
 yabai -m rule --add app="^Spotify$" space=4
 yabai -m rule --add app="^Music$" space=4
