@@ -202,6 +202,19 @@ brew install \
 - wlogout
 - playerctl
 - cliphist
+
+
+### Tweaks
+
+#### Better Fonts
+
+open `/etc/environment` and add the following line:
+
+```bash
+FREETYPE_PROPERTIES="cff:no-stem-darkening=0
+autofitter:no-stem-darkening=0"
+```
+
 </details>
 
 ## Shared
