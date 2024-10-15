@@ -37,11 +37,9 @@ return {
             -- adjusts spacing to ensure icons are aligned
             nerd_font_variant = "normal",
 
-            -- experimental auto-brackets support
             accept = { auto_brackets = { enabled = true } },
-
-            -- experimental signature help support
             trigger = { signature_help = { enabled = true } },
+
             windows = {
                 autocomplete = {
                     border = "rounded",
