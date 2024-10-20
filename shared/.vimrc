@@ -1,74 +1,194 @@
+" General Settings
+set nocompatible
 syntax on
-
-" plugins
-Plug 'tpope/vim-surround'
-Plug 'machakann/vim-highlightedyank'
-Plug 'preservim/nerdtree'
-Plug 'edluffy/hologram.nvim'
-
-" nerdtree config
-let NERDTreeQuitOnOpen = 1
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-
-" register leader
-let mapleader = " "
-
-map <leader>tt :NERDTreeToggle<Enter>
-
-map <leader>cc gc
-
-map tab :<S-l>
-map <S-tab> :bprevious<CR>
-
-let autochdir = 1
-
-" Stuff for modern terminal support
-
-" Mouse support
+filetype plugin indent on
+set encoding=utf-8
+set hidden
+set nowrap
+set backspace=indent,eol,start
+set autoindent
+set copyindent
+set number
+set relativenumber
+set showmatch
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set wildmenu
+set wildmode=list:longest,full
+set ruler
+set laststatus=2
+set confirm
+set visualbell
+set t_vb=
 set mouse=a
-set ttymouse=sgr
-set balloonevalterm
-" Styled and colored underline support
-let &t_AU = "\e[58:5:%dm"
-let &t_8u = "\e[58:2:%lu:%lu:%lum"
-let &t_Us = "\e[4:2m"
-let &t_Cs = "\e[4:3m"
-let &t_ds = "\e[4:4m"
-let &t_Ds = "\e[4:5m"
-let &t_Ce = "\e[4:0m"
-" Strikethrough
-let &t_Ts = "\e[9m"
-let &t_Te = "\e[29m"
-" Truecolor support
-let &t_8f = "\e[38:2:%lu:%lu:%lum"
-let &t_8b = "\e[48:2:%lu:%lu:%lum"
-let &t_RF = "\e]10;?\e\\"
-let &t_RB = "\e]11;?\e\\"
-" Bracketed paste
-let &t_BE = "\e[?2004h"
-let &t_BD = "\e[?2004l"
-let &t_PS = "\e[200~"
-let &t_PE = "\e[201~"
-" Cursor control
-let &t_RC = "\e[?12$p"
-let &t_SH = "\e[%d q"
-let &t_RS = "\eP$q q\e\\"
-let &t_SI = "\e[5 q"
-let &t_SR = "\e[3 q"
-let &t_EI = "\e[1 q"
-let &t_VS = "\e[?12l"
-" Focus tracking
-let &t_fe = "\e[?1004h"
-let &t_fd = "\e[?1004l"
-execute "set <FocusGained>=\<Esc>[I"
-execute "set <FocusLost>=\<Esc>[O"
-" Window title
-let &t_ST = "\e[22;2t"
-let &t_RT = "\e[23;2t"
+set cmdheight=1
+set notimeout ttimeout ttimeoutlen=200
+set pastetoggle=<F11>
+set shiftwidth=4
+set softtabstop=4
+set expandtab
 
-" vim hardcodes background color erase even if the terminfo file does
-" not contain bce. This causes incorrect background rendering when
-" using a color theme with a background color in terminals such as
-" kitty that do not support background color erase.
-let &t_ut=''
+" Leader Keys
+let mapleader = " "
+let maplocalleader = "\\"
+
+" Color and Theme (uncomment and modify as needed)
+" set background=dark
+" colorscheme desert
+
+" Plugins (uncomment and add your preferred plugin manager and plugins)
+" call plug#begin('~/.vim/plugged')
+" Plug 'tpope/vim-surround'
+" Plug 'machakann/vim-highlightedyank'
+" Plug 'preservim/nerdtree'
+" call plug#end()
+
+" NERDTree config (uncomment if using NERDTree)
+" let NERDTreeQuitOnOpen = 1
+" let NERDTreeMinimalUI = 1
+" let NERDTreeDirArrows = 1
+
+" Key Mappings
+nnoremap <leader>q :wqa<CR>
+nnoremap <leader>Q :qa!<CR>
+nnoremap <leader>bd :bd<CR>
+nnoremap U <C-r>
+nnoremap sc :new<CR>:setlocal buftype=nofile bufhidden=hide noswapfile<CR>
+nnoremap <leader>gg :terminal lazygit<CR>i
+nnoremap <leader>gb :!git blame -c -- %<CR>
+nnoremap <C-a> ggVG
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+nnoremap n nzzzv
+nnoremap N Nzzzv
+xnoremap <leader>p "_dP
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+nnoremap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gic<Left><Left><Left><Left>
+nnoremap <leader>e :Explore<CR>
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+nnoremap <leader>t :below terminal<CR>
+nnoremap <leader>vt :vertical terminal<CR>
+nnoremap <leader>/ :call ToggleComment()<CR>
+nnoremap <leader>si :call SortINISections()<CR>
+nnoremap <leader>ae :call AlignEquals()<CR>
+nnoremap <leader>cf :call InsertFunctionComment()<CR>
+nnoremap <F4> :call ToggleHeader()<CR>
+
+" Window Navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+inoremap <C-h> <Esc><C-w>h
+inoremap <C-j> <Esc><C-w>j
+inoremap <C-k> <Esc><C-w>k
+inoremap <C-l> <Esc><C-w>l
+
+" Autocommands
+augroup vimrc_autocommands
+    autocmd!
+    " C/C++ specific settings
+    autocmd FileType c,cpp setlocal tabstop=4 shiftwidth=4 expandtab
+    autocmd FileType c,cpp setlocal cindent cinoptions=g0
+    autocmd FileType c,cpp nnoremap <buffer> gd gd
+    autocmd FileType c,cpp nnoremap <F5> :w <CR>:!gcc % -o %< && ./%< <CR>
+    autocmd FileType c,cpp nnoremap <F6> :!cppcheck % <CR>
+    autocmd FileType c,cpp nnoremap <F7> :!ctags -R . <CR>
+    
+    " Config files
+    autocmd BufNewFile,BufRead *.conf,*.cfg,*.ini,*.properties setf dosini
+    autocmd BufNewFile,BufRead *.yaml,*.yml setf yaml
+    autocmd BufNewFile,BufRead *.toml setf toml
+    autocmd FileType dosini setlocal tabstop=4 shiftwidth=4 noexpandtab
+    autocmd FileType yaml,toml setlocal tabstop=2 shiftwidth=2 expandtab
+    autocmd FileType dosini,yaml,toml setlocal spell spelllang=en_us
+    autocmd FileType dosini,yaml,toml match ErrorMsg '\s\+$'
+    
+    " Terminal settings
+    autocmd TerminalOpen * setlocal nonumber norelativenumber
+    autocmd TerminalOpen * tnoremap <buffer> <Esc> <C-\><C-n>
+    autocmd TerminalOpen * tnoremap <buffer> <C-h> <C-\><C-n><C-w>h
+    autocmd TerminalOpen * tnoremap <buffer> <C-j> <C-\><C-n><C-w>j
+    autocmd TerminalOpen * tnoremap <buffer> <C-k> <C-\><C-n><C-w>k
+    autocmd TerminalOpen * tnoremap <buffer> <C-l> <C-\><C-n><C-w>l
+    
+    " Filetype-specific
+    autocmd FileType netrw call NetrwMapping()
+    autocmd BufNewFile *.{h,hpp} call <SID>insert_gates()
+    autocmd FileType dosini setlocal foldmethod=expr foldexpr=getline(v:lnum)=~'^\\s*\\[.*\\]'?'>1':'='
+    autocmd FileType yaml syntax match yamlJsonKeyword /\<\(true\|false\|null\)\>/ containedin=yamlFlowString
+augroup END
+
+" Functions
+function! NetrwMapping()
+    nmap <buffer> q :bd<cr>
+endfunction
+
+function! s:insert_gates()
+    let gatename = substitute(toupper(expand("%:t")), "\\.", "_", "g")
+    execute "normal! i#ifndef " . gatename
+    execute "normal! o#define " . gatename
+    execute "normal! Go#endif /* " . gatename . " */"
+    normal! kk
+endfunction
+
+function! ToggleHeader()
+    if expand("%:e") == "c"
+        find %:t:r.h
+    elseif expand("%:e") == "h"
+        find %:t:r.c
+    endif
+endfunction
+
+function! InsertFunctionComment()
+    let l:line = line('.')
+    call append(l:line - 1, '/**')
+    call append(l:line, ' * @brief ')
+    call append(l:line + 1, ' *')
+    call append(l:line + 2, ' * @param ')
+    call append(l:line + 3, ' * @return ')
+    call append(l:line + 4, ' */')
+    execute "normal! 5k$"
+endfunction
+
+function! ToggleComment()
+    let l:comment = '#'
+    if &filetype == 'vim'
+        let l:comment = '"'
+    elseif &filetype == 'c' || &filetype == 'cpp'
+        let l:comment = '//'
+    endif
+    let l:line = getline('.')
+    if l:line =~ '^\s*' . l:comment
+        let l:line = substitute(l:line, '^\s*' . l:comment . '\s*', '', '')
+    else
+        let l:line = l:comment . ' ' . l:line
+    endif
+    call setline('.', l:line)
+endfunction
+
+function! SortINISections() range
+    execute a:firstline . ',' . a:lastline . 'sort /^\[.\+\]$/'
+endfunction
+
+function! AlignEquals() range
+    execute a:firstline . ',' . a:lastline . 's/\s*=\s*/=/'
+    execute a:firstline . ',' . a:lastline . 'AlignCtrl l='
+    execute a:firstline . ',' . a:lastline . 'Align ='
+endfunction
+
+" Highlight settings
+highlight link yamlJsonKeyword Keyword
+
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+
+" Enable completion where available
+set omnifunc=syntaxcomplete#Complete
+
+" Avoid showing message extra message when using completion
+set shortmess+=c

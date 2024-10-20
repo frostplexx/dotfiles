@@ -21,7 +21,7 @@ return {
             keymap = {
                 show = "<C-space>",
                 hide = "<C-e>",
-                accept = "<Tab>",
+                accept = "<CR>",
                 select_prev = { "<Up>", "<C-j>" },
                 select_next = { "<Down>", "<C-k>" },
 
@@ -38,7 +38,7 @@ return {
             nerd_font_variant = "normal",
 
             accept = { auto_brackets = { enabled = true } },
-            trigger = { signature_help = { enabled = true } },
+            trigger = { signature_help = { enabled = false } },
 
             windows = {
                 autocomplete = {
