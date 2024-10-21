@@ -64,7 +64,7 @@ yabai -m space --create id=10
 yabai -m rule --add app="^Arc$" space=1
 yabai -m rule --add app="^Firefox$" space=1
 
-yabai -m rule --add app="^[Kk]itty$" space=2
+yabai -m rule --add app="^kitty$" space=2
 yabai -m rule --add app="^Alacritty$" space=2
 yabai -m rule --add app="^Terminal$" space=2
 yabai -m rule --add app="^XCode$" space=2
@@ -81,8 +81,6 @@ yabai -m rule --add app="^Music$" space=4
 yabai -m rule --add app="^Obsidian$" space=5
 yabai -m rule --add app="^Goodnotes$" space=5
 
-# Jankyborders
-borders active_color=0xff8aadf4 inactive_color=0x00494d64 width=4.0 &
 
 yabai -m signal --add event=window_created action="
   yabai -m query --windows --window $yabai_window_id | jq -er ".\"can-resize\" or .\"is-floating\"" || \
@@ -94,6 +92,10 @@ yabai -m signal --add event=window_created action="
 # yabai -m config menubar_opacity 0.0
 
 # Auto update yabai
-#YABAI_CERT=yabai-cert sh -c "$(curl -fsSL "https://git.io/update-yabai")" &
+YABAI_CERT=yabai-cert sh -c "$(curl -fsSL "https://git.io/update-yabai")" &
+
+
+# Jankyborders
+borders active_color=0xff8aadf4 inactive_color=0x00494d64 width=4.0 &
 
 /Applications/kitty.app/Contents/MacOS/kitten notify "yabai configuration loaded.."

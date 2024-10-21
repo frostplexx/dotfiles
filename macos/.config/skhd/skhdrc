@@ -17,6 +17,18 @@ cmd + ctrl - j : yabai -m window --swap south || $(yabai -m window --display sou
 cmd + ctrl - k : yabai -m window --swap north || $(yabai -m window --display north; yabai -m display --focus north)
 cmd + ctrl - l : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east)
 
+# Minimize window
+cmd - m : yabai -m window --minimize
+
+# Restore minimized window (new approach)
+cmd + shift - m : \
+    window_id=$(yabai -m query --windows --space | \
+                jq -r 'map(select(has("is-minimized") and .["is-minimized"] == true)) | .[0].id') && \
+    if [[ -n "${window_id}" && "${window_id}" != "null" ]]; then \
+        yabai -m window --deminimize "${window_id}" --focus; \
+    else \
+        echo "No minimized windows found on current space"; \
+    fi
 
 
 # move focused window to previous workspace
